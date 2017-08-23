@@ -21,7 +21,7 @@
                             <div class="col-md-12 text-center">
                                 <ul class="social-network social-circle">
                                     <li>
-                                        <a href="https://www.facebook.com/adi.singh1992" class="icoFacebook" title="Facebook" rel="nofollow" target="_blank">
+                                        <a href="https://www.facebook.com/349283272171373" class="icoFacebook" title="Facebook" rel="nofollow" target="_blank">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>

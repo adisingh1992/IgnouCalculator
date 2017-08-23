@@ -95,7 +95,8 @@
                                 <h5 class="text-center"><strong>&lt;/ Front-End Developer &gt;</strong></h5>
                                 <p class="text-justify text-left">
                                     Front-end developer who focuses on writing clean, elegant and efficient code.
-                                    Love to work with HTML5, CSS3, Wordpress and a touch of JQuery, also an avid blogger.
+                                    Loves to work with HTML5, CSS3, PHP, Wordpress and a touch of JQuery/Javascript,
+                                    also an avid blogger.
                                 </p>
                                 <h4 class="text-center text-muted">N E R D - S K I L L S</h4>
                                 <div class="row team-skills">
