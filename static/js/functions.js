@@ -38,6 +38,7 @@ function get_data(){
 }
 
 function generate_table(program){
+    $("#instructions").hide();
     $("#name").html("Name: ");
     $("#enum").html("Enrolment Number: ");
     if(program === "MCA"){
@@ -54,7 +55,10 @@ function validate_marks_data(marks, eno){
     try{
         $.parseJSON(marks);
     }catch(error){
-        $("#data_table").append(marks);
+        $("#instructions").show();
+        $("#name").html("");
+        $("#enum").html("");
+        $("#data_table").html(marks);
         return;
     }
     populate_table(JSON.parse(marks), eno);    

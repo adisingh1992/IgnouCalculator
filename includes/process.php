@@ -68,6 +68,6 @@
         echo subscription_response($email);
     }
     else{
-        echo "Oops..!! Something went wrong, try again";
+        echo "<script>alert('Oops..!! Something went wrong, try again');</script>";
     }
 ?>
