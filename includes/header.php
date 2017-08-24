@@ -24,7 +24,7 @@
     </head>
     <body>
         <div class="loading" id="loading"></div>
-        <div class="container-fluid">
+        <div itemscope itemtype="http://schema.org/SoftwareApplication" class="container-fluid">
             <nav class="mynavbar">
                 <div class="container-fluid">
                     <div class="navbar-header">

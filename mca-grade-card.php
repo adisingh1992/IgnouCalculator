@@ -661,4 +661,6 @@
                     </table>
                 </div>
             </div>
+            <meta itemprop="name" content="MCA Percentage Calculator">
+            <meta itemprop="url" content="https://www.ignoucalculator.com/mca-grade-card">
 <?php include_once 'includes/footer.php'; ?>

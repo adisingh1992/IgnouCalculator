@@ -7,7 +7,7 @@
         <div class="clearfix"></div>
         <div class="row logo_area">
             <div class="col-md-3 col-md-offset-1">
-                <img src="static/image/logo.png" class="img-rounded img-responsive pull-left" alt="logo image"/>
+                <img itemprop="image" src="static/image/logo.png" class="img-rounded img-responsive pull-left" alt="logo image"/>
             </div>
             <div class="col-md-5">
                 <h2 class="animated pulse text-primary">Engineered To Perfection!</h2>

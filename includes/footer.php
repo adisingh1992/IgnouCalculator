@@ -73,6 +73,14 @@
                 </div>
                 <div class="clearfix"></div>
             </footer>
+            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="Team Scorpion"></span>
+            <meta itemprop="name" content="IgnouCalculator">
+            <meta itemprop="applicationCategory" content="Education Software">
+            <meta itemprop="url" content="https://www.ignoucalculator.com/">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="Team Scorpion"></span>
+            <meta itemprop="datePublished" content="2017-08-17">
         </div>
         <!--Scripts-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
