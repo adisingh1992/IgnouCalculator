@@ -89,7 +89,33 @@
             $marks[$i][10] = $total_marks[2][$i];            
         }
         $marks[] = print_final_marks($total_marks[2]);
-        echo json_encode($marks);
+        return $marks;
+    }
+
+    function fetch_marks_cache($enrolment, $program){
+        $db = new Db();
+        $query = "SELECT datadump FROM marks WHERE eno=".$enrolment." AND program='".$program."';";
+        $result = $db->select($query);
+        if(empty($result)){
+            return false;
+        }
+        $result = unserialize($result[0]["datadump"]);
+        return $result;
+    }
+
+    function update_marks_cache($enrolment, $marks, $program){
+        $db = new Db();
+        $query = "SELECT eno FROM marks WHERE eno=".$enrolment." AND program='".$program."';";
+        $result = $db->select($query);
+        $marks = serialize($marks);
+        if(empty($result)){
+            $query = "INSERT INTO marks(eno, datadump, program) VALUES(".$enrolment.",'".$marks."', '".$program."');";
+            $db->query($query);
+        }
+        else{
+            $query = "UPDATE marks SET datadump='".$marks."', timing=NOW() WHERE eno=".$enrolment." AND program='".$program."';";
+            $db->query($query);
+        }
     }
 
     function students_list_response($ccode, $batch){

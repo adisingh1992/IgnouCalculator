@@ -20,7 +20,21 @@
             }
             else{
                 $program = htmlspecialchars($_POST["program"]);
-                marks_response(fetch_data($enrolment, $program));
+                $marks = marks_response(fetch_data($enrolment, $program));
+                if(empty($marks)){
+                    $marks = fetch_marks_cache($enrolment, $program);
+                    if($marks === false){
+                        die("<script>alert('Oops, IGNOU\'s servers are down currently, try again later..!!');</script>");
+                    }
+                    else{
+                        echo json_encode($marks);
+                    }
+                }
+                else{
+                    echo json_encode($marks);
+                    flush();
+                    update_marks_cache($enrolment, $marks, $program);
+                }
             }
         }
         elseif($id === 2){

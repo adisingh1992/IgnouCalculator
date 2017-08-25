@@ -26,7 +26,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/h4ck3radi" class="icoTwitter" title="Twitter" rel="nofollow" target="_blank">
+                                        <a href="https://twitter.com/IgnouCalculator" class="icoTwitter" title="Twitter" rel="nofollow" target="_blank">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
