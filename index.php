@@ -35,6 +35,25 @@
         </div>
         <div class="clearfix"></div>
         <div class="row">
+            <div class="col-md-8 col-md-offset-1 text-center panel panel-default" style="border: 0;">
+                <div class="panel-heading" style="padding: 25px; border-radius: 20px 20px 0 0;">
+                    <h3><strong><i class="fa fa-calculator "></i> Calculate Your Result</strong></h3>
+                </div>
+                <div class="panel-body" style="box-shadow: inset 0px 0px 10px #ddd; padding: 10px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="form-control form_input btn btn-primary animated rubberBand" style="line-height: 0; margin-top: 5px;" onclick="location.href='bca-grade-card.php';">BCA</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="form-control form_input btn btn-info animated rubberBand" style="line-height: 0; margin-top: 5px;" onclick="location.href='mca-grade-card.php';">MCA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
             <div class="col-md-8 col-md-offset-1 about_theory">
                 <p class="text-muted text-justify about">&raquo;
                     Welcome to IgnouCalculator -- an information resource designed to help you get a more comprehensive analysis of your
@@ -81,7 +100,7 @@
                 <h2 class="text-center why_box_image"><span class="fa fa-book fa-3x"></span></h2>
                 <p class="text-center">Download Solved Assignments</p>
             </div>
-            <div class="col-md-2 why_boxes" onclick="location.href='mca-grade-card.php';">
+            <div class="col-md-2 why_boxes" data-toggle="modal" data-target="#myModal">
                 <h2 class="text-center why_box_image"><span class="fa fa-calculator fa-3x"></span></h2>
                 <p class="text-center">Percentage Calculator</p>
             </div>
@@ -91,6 +110,31 @@
             </div>
             <div class="col-md-3"></div>
         </div>
+        <!--Calculator Modal-->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center text-muted"><i class="fa fa-calculator"></i> Calculate BCA / MCA Percentage</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="form-control form_input btn btn-primary animated rubberBand" style="line-height: 0; margin-top: 5px;" onclick="location.href='bca-grade-card.php';">BCA</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="form-control form_input btn btn-info animated rubberBand" style="line-height: 0; margin-top: 5px;" onclick="location.href='mca-grade-card.php';">MCA</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-outline center-block" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -->
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-md-4 col-md-offset-3 feedback_section">
@@ -98,23 +142,23 @@
                 <div class="feedback_form">
                     <form id="feedback_form" method="POST" autocomplete="off">
                         <div class="form-group feed_form">
-                            <input type="text" id="username" class="form-control feed_input_style" placeholder="Enter your name"/>
+                            <input type="text" id="username" class="form-control feed_input_style form_input" placeholder="Enter your name"/>
                         </div>
                         <div class="form-group feed_form">
-                            <input type="email" id="email" class="form-control feed_input_style" placeholder="Enter your e-mail address"/>
+                            <input type="email" id="email" class="form-control feed_input_style form_input" placeholder="Enter your e-mail address"/>
                         </div>
                         <div class="form-group feed_form">
-                            <textarea class="form-control feed_input_style" id="msg" rows="4" style="resize: none;" placeholder="Enter your feedback"></textarea>
+                            <textarea class="form-control feed_input_style form_input" id="msg" rows="4" style="resize: none;" placeholder="Enter your feedback"></textarea>
                         </div>
                         <div class="form-group feed_form form-inline text-center">
                             <img src="includes/captcha.php" id="img_captcha" alt="captcha"/>
-                            <input type="text" placeholder="Enter the captcha code" id="captcha" class="form-control" style="margin-top: 5px;"/>
+                            <input type="text" placeholder="Enter the captcha code" id="captcha" class="form-control text-center form_input" style="margin-top: 5px;" size="25"/>
                         </div>
-                        <div class="form-group feed_form text-center">
+                        <div class="form-group feed_form text-center form-inline">
                             <span><strong id="feedback_result"></strong></span><br/>
                             <input type="text" id="form_id" value="<?php echo $form_id; ?>" hidden/>
-                            <input type="submit" class="btn btn-success"/>
-                            <input type="reset" class="btn btn-danger"/>
+                            <button type="submit" class="form-control form_input btn btn-success btn-outline" style="line-height: 0; margin-top: 5px;">Submit</button>
+                            <button type="reset" class="form-control form_input btn btn-danger btn-outline" style="line-height: 0; margin-top: 5px;">Reset</button>
                         </div>
                     </form>
                 </div>

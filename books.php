@@ -1,10 +1,10 @@
 <?php require_once 'includes/http_cache.php'; ?>
 <?php include_once "includes/header.php"; ?>
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="panel-group" id="accordion">
                         <div class="faqHeader"><h3>MCA COURSE MATERIAL</h3></div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <strong class="panel-title">SEMESTER - 1</strong>
                             </div>
@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <strong class="panel-title">SEMESTER - 2</strong>
                             </div>
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <strong class="panel-title">SEMESTER - 3</strong>
                             </div>
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                 <strong class="panel-title">SEMESTER - 4</strong>
                             </div>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                                 <strong class="panel-title">SEMESTER - 5</strong>
                             </div>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
                                 <strong class="panel-title">SEMESTER - 6</strong>
                             </div>
@@ -103,15 +103,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
             <br/><hr/><br/>
             <div class="clearfix"></div>
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="panel-group" id="accordion1">
                         <div class="faqHeader"><h3>BCA COURSE MATERIAL</h3></div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
                                 <strong class="panel-title">SEMESTER - 1</strong>
                             </div>
@@ -127,7 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
                                 <strong class="panel-title">SEMESTER - 2</strong>
                             </div>
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
                                 <strong class="panel-title">SEMESTER - 3</strong>
                             </div>
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
                                 <strong class="panel-title">SEMESTER - 4</strong>
                             </div>
@@ -182,7 +182,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
                                 <strong class="panel-title">SEMESTER - 5</strong>
                             </div>
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix1">
                                 <strong class="panel-title">SEMESTER - 6</strong>
                             </div>
@@ -218,6 +218,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
 <?php include_once "includes/footer.php"; ?>

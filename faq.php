@@ -2,7 +2,7 @@
 <?php include_once 'includes/header.php'; ?>
             <br/>
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="alert alert-warning alert-dismissible faqHeader" role="alert">
                         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                         <span>Get instant answers for the most common questions about this site and learn how to use it in no time. 
@@ -10,7 +10,7 @@
                     </div>
                     <div class="panel-group" id="accordion">
                         <div class="faqHeader"><h3>FREQUENTLY ASKED QUESTIONS</h3></div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <strong class="panel-title">Are my marks and grades represented here, authentic?</strong>
                             </div>
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <strong class="panel-title">Is this an official IGNOU site?</strong>
                             </div>
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <strong class="panel-title">Will i be charged for using this website?</strong>
                             </div>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                 <strong class="panel-title">Does this site store my personal information?</strong>
                             </div>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                                 <strong class="panel-title">What more this site offers that others don't?</strong>
                             </div>
@@ -81,6 +81,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
             </div>
 <?php include_once 'includes/footer.php'; ?>

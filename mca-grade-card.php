@@ -14,10 +14,10 @@
                 <div class="col-md-12 text-center">
                     <form class="form-inline text-center myform form-inline" role="search" autocomplete="off" id="grade_form" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control text-center" placeholder="Enter Enrolment Number" name="eno" id="eno" required="true" size="40" style="margin-top: 10px; border:1px solid gray !important;border-radius: 5px;"/>
+                            <input type="text" class="form-control text-center form_input" placeholder="Enter Enrolment Number" name="eno" id="eno" required="true" size="40" style="margin-top: 10px; border:1px solid gray !important;border-radius: 5px;"/>
                             <input type="text" id="form_id" value="<?php echo $form_id; ?>" hidden/>
                             <input type="text" id="program" value="MCA" hidden/>
-                            <button type="submit" class="btn btn-success form-control my-button" style="margin-top: 10px;">Submit</button>
+                            <button type="submit" class="form-control form_input btn btn-primary btn-outline" style="line-height: 0; margin-top: 10px;">Submit</button>
                         </div>
                     </form>
                 </div>

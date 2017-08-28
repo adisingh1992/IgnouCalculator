@@ -3530,7 +3530,7 @@
                         </div>
                         <div class="form-group">
                             <input type="text" id="form_id" value="<?php echo $form_id; ?>" hidden/>
-                            <input type="submit" value="Submit" class="btn btn-success form-control my-button"/>
+                            <button type="submit" class="form-control btn btn-primary btn-outline" style="line-height: 0;">Submit</button>
                         </div>
                     </form>
                 </div>

@@ -12,6 +12,8 @@ $(document).ready(function(){
     get_student_data();
     feedback();
     subscribe();
+    get_projects();
+    set_projects_counter();
 });
 
 function get_data(){
@@ -206,5 +208,47 @@ function subscribe(){
             }
         });
         $('#subscribe_form')[0].reset();
+    });
+}
+
+function get_projects(){
+    $("#projects_collapse li").on("click", function(event){
+        event.preventDefault();
+        var project = $(this).attr("value");
+        var form_id = $(this).attr("form_id");
+        var p_type = $(this).attr("p_type");
+        var id = "6";
+        $.ajax({
+        type: 'POST',
+            url: 'includes/process.php',
+            data: {id : id, project : project, form_id : form_id, p_type : p_type},
+            success: function(data){
+                $("#project_tagline").hide();
+                $("#projects_info").hide();
+                $("#projects_list").html(data);
+            },
+            error: function(){
+                alert("Oops!! Something went wrong, Please try again.");
+            }
+        });
+    });
+}
+
+function set_projects_counter(){
+    $("#projects_list").on("click", "#download", function(event){
+        event.preventDefault();
+        var project_id = $(this).attr("value");
+        var url = $(this).attr("href");
+        var id = "7";
+        $.ajax({
+        type: 'POST',
+            url: 'includes/process.php',
+            data: {id : id, project_id : project_id},
+            success: function(){
+                window.location.href = "projects/"+url;
+            },
+            error: function(){
+            }
+        });
     });
 }

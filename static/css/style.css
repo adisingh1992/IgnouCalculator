@@ -117,6 +117,7 @@ footer{
     margin-top: 2%;
 }
 .footer_panel{
+    border: 0;
     margin-top: 30px;
     padding: 5%;
     margin-right: 2%;
@@ -158,6 +159,13 @@ ul.social-network li {
 .social-network a.icoLinkedin:hover {
     background-color:#007bb7;
 }
+.social-network a.icoInstagram:hover {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
     color:#fff;
@@ -176,6 +184,7 @@ a.socialIcon:hover, .socialHoverClass {
     width: 50px;
     height: 50px;
     font-size:20px;
+    border: 1px solid #b3b3b3;
 }
 .social-circle li i {
     margin:0;
@@ -202,7 +211,7 @@ a.socialIcon:hover, .socialHoverClass {
     transition: all 0.8s;
 }
 .social-network li a{
-    background-color: #000;
+    background-color: #D3D3D3;
 }
 /*faq section*/
 .faqHeader {
@@ -254,6 +263,10 @@ a.socialIcon:hover, .socialHoverClass {
 .animated.bounceIn,
 .animated.bounceOut {
   animation-duration: .75s;
+}
+
+.rubberBand {
+    animation-name: rubberBand;
 }
 
 .marquee {
@@ -309,6 +322,36 @@ a.socialIcon:hover, .socialHoverClass {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .pulse {
@@ -374,6 +417,41 @@ pre{
     word-spacing: 7px;
     box-shadow: 0px 5px 5px -2px dimgray;
     padding: 20px;
+}
+
+.form_input{
+    padding: 22px;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-primary.btn-outline:hover{
+    color: #fff;
+}
+
+#counter{
+    display: inline-block;
+    padding: 8px 8px 8px;
+    border-radius: 3px;
+    /*background: #b09dc4;*/
+    margin-right: 2px;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+}
+
+#counter:hover{
+    animation-name: rubberBand;
 }
 
 /* Ajax loader */

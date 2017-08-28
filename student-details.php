@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <input type="text" id="form_id" value="<?php echo $form_id; ?>" hidden="true"/>
-                            <input class="form-control btn btn-success" type="submit"/>
+                            <button type="submit" class="form-control btn btn-primary btn-outline" style="line-height: 0;">Submit</button>
                         </div>
                     </form>
                 </div>

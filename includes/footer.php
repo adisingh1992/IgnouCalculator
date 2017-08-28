@@ -1,3 +1,15 @@
+<?php
+    function counter(){
+        $raw_count = fopen("counter.txt","r");
+        $count = fgets($raw_count);
+        fclose($raw_count);
+        $count += 1 ;
+        $raw_count = fopen("counter.txt","w");
+        fwrite($raw_count, $count);
+        fclose($raw_count);
+        return str_split($count);
+    }
+?>
             <div class="clearfix"></div>
             <footer class="container-fluid">
                 <div class="row">
@@ -6,12 +18,12 @@
                             <p class="text-center text-justify text-muted">
                                 Want updates, wanna know what your very own university's been upto, right in your inbox? Hop on the list!
                             </p>
-                            <form method="POST" id="subscribe_form" autocomplete="off">
+                            <form method="POST" id="subscribe_form" autocomplete="off" class="form-inline">
                                 <div class="form-group">
-                                    <input type="email" id="email_id" class="form-control" placeholder="Enter your e-mail address"/>
+                                    <input type="email" id="email_id" class="form-control form_input" size="50" placeholder="Enter your e-mail address"/>
                                 </div>
-                                <div class="form-group pull-right">
-                                    <input type="submit" value="Submit" class="btn btn-success"/>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control form_input btn btn-primary btn-outline" style="line-height: 0; margin-top: 10px;">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -21,13 +33,18 @@
                             <div class="col-md-12 text-center">
                                 <ul class="social-network social-circle">
                                     <li>
-                                        <a href="https://www.facebook.com/349283272171373" class="icoFacebook" title="Facebook" rel="nofollow" target="_blank">
+                                        <a href="https://www.facebook.com/ignoucalculator" class="icoFacebook" title="Facebook" rel="nofollow" target="_blank">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/IgnouCalculator" class="icoTwitter" title="Twitter" rel="nofollow" target="_blank">
                                             <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/ignoucalculator/" class="icoInstagram" title="Instagram" rel="nofollow" target="_blank">
+                                            <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
@@ -56,11 +73,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center footer-logo zoomin banner">
+                    <div class="col-md-4 text-center footer-logo zoomin banner text-muted">
                         <a href="http://www.ignou.ac.in" rel="nofollow" target="_blank">
-                            <img src="static/image/ignou-footer-logo.png" alt="ignou footer logo" class="img-responsive"/>
-                            <strong>Official Resource <span class="glyphicon glyphicon-new-window"></span></strong>
+                            <h4 style="margin: 30px 0 20px 0;">Official Resource <span class="glyphicon glyphicon-new-window"></span></h4>
                         </a>
+                        <div class="well" style="width: 90%; margin: auto;">
+                            <h4>Share with your friends</h4>
+                            <div class="fb-share-button" data-href="https://www.facebook.com/ignoucalculator/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fignoucalculator%2F&amp;src=sdkpreparse">Share</a></div>
+                        </div>
+                        <h4>Unique Visitors</h4>
+                        <div>
+                            <?php
+                                $count = counter();
+                                foreach($count as $c){
+                                    echo "<span id='counter' class='animated cursor_pointer'>$c</span>";
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -84,7 +113,16 @@
         </div>
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="static/js/functions.js"></script>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
     </body>
 </html>
