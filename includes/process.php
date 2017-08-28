@@ -73,6 +73,11 @@
                 student_details_response($enrolment, $program);
             }
         }
+        elseif($id === 6){
+            $project_type = htmlspecialchars($_POST["project"]);
+            $p_type = htmlspecialchars($_POST["p_type"]);
+            echo project_response($project_type, $p_type);
+        }
     }
     elseif(validator(htmlspecialchars($_POST["id"]), 2) === 5){
         $email = htmlspecialchars($_POST["email"]);
@@ -80,6 +85,9 @@
             die("<script>alert('Invalid E-mail address, try again..!!');</script>");
         }
         echo subscription_response($email);
+    }
+    elseif(validator(htmlspecialchars($_POST["id"]), 2) === 7){
+        update_projects_count(htmlspecialchars($_POST["project_id"]));
     }
     else{
         echo "<script>alert('Oops..!! Something went wrong, try again');</script>";

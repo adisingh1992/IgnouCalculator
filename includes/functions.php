@@ -186,4 +186,36 @@
             return "<script>alert('E-mail is already subscribed..!!');</script>";
         }
     }
+    
+    function project_response($project_type, $p_type){
+        $db = new Db();
+        $project_type = $db->escape($project_type);
+        if($p_type === '0'){
+            $query = "SELECT * FROM projects WHERE language LIKE '%".$project_type."%';";
+        }
+        elseif($p_type === '1'){
+            $query = "SELECT * FROM projects;";
+        }
+        $result = $db->select($query);
+        if(empty($result)){
+            return "<script>alert('Oops..!! Something went wrong, try again'); $('#project_tagline').show(); $('#projects_info').show();</script>";
+        }
+        $response = "";
+        foreach($result as $r){
+            $name = substr($r["name"], 1, -1);
+            $filename = substr($r["filename"], 1, -1);
+            $description = substr($r["description"], 1, -1);
+            $language = substr($r["language"], 1, -1);
+            $response .= '<div class="col-md-10 pull-right"> <div class="panel panel-primary"> <div class="panel-heading">'.$name.'</strong></div><div class="panel-body"> <div class="row"> <div class="col-md-2"><strong>Description:</strong></div><div class="col-md-10 text-justify"> <p>'.$description.'</p></div></div><div class="row" style="padding: 10px 0 10px 0;"> <div class="col-md-2"><strong>Downloads:</strong></div><div class="col-md-10">'.$r["counter"].'</div></div><div class="row"> <div class="col-md-2"><strong>Technology:</strong></div><div class="col-md-8">'.$language.'</div><div class="col-md-2"> <button href="'.$filename.'" id="download" value="'.$r["id"].'" class="btn btn-primary btn-outline pull-right">Download&nbsp;<i class="fa fa-download"></i></button> </div></div></div></div></div>';
+        }
+        return $response;
+    }
+    
+    function update_projects_count($project_id){
+        $db = new Db();
+        $project_id = $db->escape($project_id);
+        $query = "UPDATE projects SET counter=counter+1 WHERE id='".$project_id."';";
+        $db->query($query);
+        return;
+    }
 ?>
