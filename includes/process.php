@@ -21,7 +21,7 @@
             else{
                 $program = htmlspecialchars($_POST["program"]);
                 $marks = marks_response(fetch_data($enrolment, $program));
-                if(empty($marks)){
+                if($marks === null){
                     $marks = fetch_marks_cache($enrolment, $program);
                     if($marks === false){
                         die("<script>alert('Oops, IGNOU\'s servers are down currently, try again later..!!');</script>");

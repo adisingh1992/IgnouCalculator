@@ -24,7 +24,7 @@
             )
         );
         $context  = stream_context_create($options);
-        $result = file_get_html($url, false, $context) or die("<script>alert('Oops!! IGNOU\'s servers are not responding at the moment, please try again in sometime');</script>");
+        $result = file_get_html($url, false, $context) or false;
         return $result;
     }
 
@@ -32,6 +32,9 @@
         $url = 'https://webservices.ignou.ac.in/GradecardM/result.asp';
         $data_array = array('eno' => $enrolment, 'program' => $program, 'HIDDEN_submit' => 'OK');
         $data = url_request($url, $data_array);
+        if($data === false){
+            return null;
+        }
         $marks = array();
         $name[0] = $data->find('b', 4)->plaintext;
         if($name[0] === null){
@@ -82,6 +85,9 @@
     }
 
     function marks_response($marks){
+        if($marks === null){
+            return null;
+        }
         $total_marks = calculate_result($marks);
         for($i=0; $i<count($marks); $i++){
             $marks[$i][8] = $total_marks[0][$i];
