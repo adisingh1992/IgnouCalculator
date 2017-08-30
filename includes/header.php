@@ -43,19 +43,25 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Percentage Calculator<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li ><a href="bca-grade-card.php"><span class="fa fa-graduation-cap" aria-hidden="true"></span>&nbsp;&nbsp;BCA</a></li>
-                                    <li ><a href="mca-grade-card.php"><span class="fa fa-mortar-board" aria-hidden="true"></span>&nbsp;&nbsp;MCA</a></li>
+                                    <li><a href="bca-grade-card.php"><span class="fa fa-graduation-cap" aria-hidden="true"></span>&nbsp;&nbsp;BCA</a></li>
+                                    <li><a href="mca-grade-card.php"><span class="fa fa-mortar-board" aria-hidden="true"></span>&nbsp;&nbsp;MCA</a></li>
                                 </ul>
                             </li>
-                            <li><a href="http://ibcasolvedassignment.blogspot.com/" rel="nofollow" target="_blank">Solved Assignments</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://webservices.ignou.ac.in/assignments/" rel="nofollow" target="_blank"><span class="fa fa-question-circle" aria-hidden="true"></span>&nbsp;&nbsp;Assignments</a></li>
+                                    <li><a href="http://ibcasolvedassignment.blogspot.com/" rel="nofollow" target="_blank"><span class="fa fa-database" aria-hidden="true"></span>&nbsp;&nbsp;Solved Assignments</a></li>
+                                    <li><a href="assignment-status.php"><span class="fa fa-info-circle" aria-hidden="true"></span>&nbsp;&nbsp;Submission Status</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student Zone<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li ><a href="student-details.php"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;&nbsp;Student Details</a></li>
-                                    <li ><a href="student-list.php"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Student List</a></li>
-                                    <li ><a href="question-papers.php"><span class="fa fa-question-circle-o" aria-hidden="true"></span>&nbsp;&nbsp;Question Papers</a></li>   
-                                    <li ><a href="books.php"><span class="fa fa-book" aria-hidden="true"></span>&nbsp;&nbsp;Ignou Books</a></li>
-                                    <li ><a href="https://webservices.ignou.ac.in/assignments/" rel="nofollow" target="_blank"><span class="fa fa-download" aria-hidden="true"></span>&nbsp;&nbsp;Assignments</a></li>
+                                    <li><a href="student-details.php"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;&nbsp;Student Details</a></li>
+                                    <li><a href="student-list.php"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Student List</a></li>
+                                    <li><a href="question-papers.php"><span class="fa fa-question-circle-o" aria-hidden="true"></span>&nbsp;&nbsp;Question Papers</a></li>   
+                                    <li><a href="books.php"><span class="fa fa-book" aria-hidden="true"></span>&nbsp;&nbsp;Ignou Books</a></li>
                                 </ul>
                             </li>
                             <li><a href="project-and-synopsis.php">Project Report & Synopsis</a></li>

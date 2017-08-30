@@ -224,4 +224,16 @@
         $db->query($query);
         return;
     }
+    
+    function assignment_status_response($enrolment, $program){
+        $program = strtoupper($program);
+        $url = "http://admission.ignou.ac.in/changeadmdata/StatusAssignment.asp";
+        $data_array = array('enrno' => $enrolment, 'program' => $program, 'Submit' => '1');
+        $data = url_request($url, $data_array);
+        $table_data = $data->find('table', 1);
+        if(empty($table_data)){
+            return "<script>alert('Oops..!! Something went wrong, try again');</script>";
+        }
+        return $table_data;
+    }
 ?>

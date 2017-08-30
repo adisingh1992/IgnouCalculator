@@ -78,6 +78,15 @@
             $p_type = htmlspecialchars($_POST["p_type"]);
             echo project_response($project_type, $p_type);
         }
+        elseif($id === 8){
+            $enrolment = validator(htmlspecialchars($_POST["eno"]), 1);
+            $program = htmlspecialchars($_POST["program"]);
+            if($enrolment === false){
+                $error .= "<script>alert('Oops!! Looks like you entered an invalid enrolment number, please try again');</script>";
+                die($error);
+            }
+            echo assignment_status_response($enrolment, $program);
+        }
     }
     elseif(validator(htmlspecialchars($_POST["id"]), 2) === 5){
         $email = htmlspecialchars($_POST["email"]);

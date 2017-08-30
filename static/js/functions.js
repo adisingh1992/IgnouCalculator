@@ -14,6 +14,7 @@ $(document).ready(function(){
     subscribe();
     get_projects();
     set_projects_counter();
+    get_assignment_status()
 });
 
 function get_data(){
@@ -250,5 +251,31 @@ function set_projects_counter(){
             error: function(){
             }
         });
+    });
+}
+
+function get_assignment_status(){
+    $("#status_form").submit(function(event){
+        event.preventDefault();
+        var eno = $("#eno").val();
+        var program = $("#program").val();
+        var form_id = $("#form_id").val();
+        var id = '8';
+        $.ajax({
+        type: 'POST',
+            url: 'includes/process.php',
+            data: {eno : eno, program : program, id : id, form_id : form_id},
+            success: function(data){
+                $("#instructions").hide();
+                $("#status").show();
+                $("#status-table").html(data);
+            },
+            error: function(){
+                alert("Oops!! Something went wrong, Please try again.");
+                $("#instructions").show();
+                $("#status").hide();
+            }
+        });
+        $('#status_form')[0].reset();
     });
 }

@@ -454,6 +454,18 @@ pre{
     animation-name: rubberBand;
 }
 
+#status{
+    display: none;
+}
+
+#status-table{
+    font-size: 14px;
+}
+
+#status-table td{
+    padding: 2%;
+}
+
 /* Ajax loader */
 /* Absolute Center Spinner */
 .loading {
