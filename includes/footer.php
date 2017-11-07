@@ -1,13 +1,7 @@
 <?php
     function counter(){
-        $raw_count = fopen("counter.txt","r");
-        $count = fgets($raw_count);
-        fclose($raw_count);
-        $count += 1 ;
-        $raw_count = fopen("counter.txt","w");
-        fwrite($raw_count, $count);
-        fclose($raw_count);
-        return str_split($count);
+        include_once "analytics/analytics-api.php";
+        return str_split($pageviews);
     }
 ?>
             <div class="clearfix"></div>
